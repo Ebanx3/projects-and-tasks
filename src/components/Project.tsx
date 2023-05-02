@@ -12,13 +12,6 @@ const Project = () => {
   const [task, setTask] = useState("");
 
   const addTaskToProject = () => {
-    // const newPrj: ProjectType = {
-    //   name: project?.name || " ",
-    //   description: project?.description || "",
-    //   tasks: project?.tasks || [],
-    // };
-    // newPrj?.tasks?.push(task);
-    // setProject(newPrj);
     addTask(project?.name || " ", task);
     setTask("");
   };
