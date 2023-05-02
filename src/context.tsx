@@ -34,20 +34,16 @@ export const Context = ({ children }: PropsWithChildren) => {
   };
 
   const removeTask = (projectName: string, task: string) => {
-    console.log("project name", projectName);
-    console.log("task", task);
     const index = projects.findIndex((pj: Project) => pj.name === projectName);
     if (index < 0) return;
-    console.log(index);
+
     const newArray = [...projects];
-    console.log(newArray);
 
     const ind = newArray[index].tasks.findIndex((tsk: string) => tsk === task);
 
     if (ind < 0) return;
 
     newArray[index].tasks.splice(ind, 1);
-    console.log(newArray);
 
     setProjects(newArray);
   };
